@@ -13,7 +13,8 @@ app.use(express.json());
 app.use("/api", gameRoutes); // Mount the game routes at /api path
 
 const mongoDB =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/MultiTicToe";
+  process.env.MONGODB_URI ||
+  "mongodb+srv://ricohermosoryan14344:EkWdu0wuijTsQNS9@cluster0.oi0xl9d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 mongoose
   .connect(mongoDB)
   .then(() => console.log("Database Connected..."))
